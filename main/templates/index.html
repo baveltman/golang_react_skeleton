@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel=”author” href="https://github.com/baveltman" />
+
+  <!-- open graph -->
+  <meta property=”og:title” content=””/>
+  <meta property=”og:description content=””/>
+  <meta property=”og:type”  content="website"/>
+  <meta property="og:image" content="" />
+  <meta property="og:url"   content="" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="" class="js-favicon">
+</head>
+
+<body>
+  <div id="app-mountpoint"></div>
+  <script type="text/javascript" src="/static/dist/js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/dist/css/index.css" />
+  <script type="text/javascript">
+    // Initialization glue code
+    var props = {{.Json}}
+    window.MyApp.init({
+      mount: 'app-mountpoint',
+      props: props
+    });
+  </script>
+</body>
+</html>

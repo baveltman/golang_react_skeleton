@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2017-01-01T23:54:55Z
+  labels:
+    run: web-client
+  name: web-client
+  namespace: default
+spec:
+  clusterIP: {YOUR_CLUSTER_IP}
+  ports:
+  - name: http
+    nodePort: 30838
+    port: 30838
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: web-client
+  sessionAffinity: None
+  type: NodePort

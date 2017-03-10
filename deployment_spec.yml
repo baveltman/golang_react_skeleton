@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web-client
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: web-client
+    spec:
+      containers:
+      - name: web-client
+        image: {YOUR_IMAGE}
